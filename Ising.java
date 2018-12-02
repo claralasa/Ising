@@ -5,16 +5,25 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.File;
 
+/**
+*
+* Java version of the FORTRAN program that implements the solution to the ising problem.
+*
+* @author Clara Lasaosa García, David Iglesias Sánchez and Lucía Abascal Ceruti
+*/
+
 public class Ising {
 	public static void main(String[] args) {
+		
 //	Define and initialize some of the variables. 
+		
   int[][] lattice; //Spin map of the system
   int[] ip,  im; //map of first neighbours
   float[] w = new float[9]; // Array from -4 to 4 and probability exp^-2(E/kT)
 
   float Jkt;
-  float external_magnetic_field;
-  int energy;
+  float external_magnetic_field; //External magnetic field
+  int energy; //Energy
   
   int i, j, mcs, L;
   int nsample, ndelta, nequil, mcsmax;
@@ -23,7 +32,7 @@ public class Ising {
 
   float mag, ave_mag, ave_mag2, ji;
   float acc_mag, acc_mag2, acc_energy, acc_energy2;
-  float jktc, red_temp, invsize;
+  float jktc, red_temp, invsize; //reduced temperature
 
 
   int iseed = 21;
@@ -49,7 +58,7 @@ public class Ising {
     lattice[i] = new int[L];
   }
          
-	ip = new int[L];
+  ip = new int[L];
   im = new int[L];
 
   // Ask user for reduced temperature and store it in red_temp variable
