@@ -22,8 +22,8 @@ public class Ising {
   float[] w = new float[9]; // Array from -4 to 4 and probability exp^-2(E/kT)
 
   float Jkt;
-  float external_magnetic_field; //External magnetic field
-  int energy; //Energy
+  float external_magnetic_field; 
+  int energy; 
   
   int i, j, mcs, L;
   int nsample, ndelta, nequil, mcsmax;
@@ -32,7 +32,7 @@ public class Ising {
 
   float mag, ave_mag, ave_mag2, ji;
   float acc_mag, acc_mag2, acc_energy, acc_energy2;
-  float jktc, red_temp, invsize; //reduced temperature
+  float jktc, red_temp, invsize;
 
 
   int iseed = 21;
