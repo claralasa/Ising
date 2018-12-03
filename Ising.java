@@ -22,17 +22,17 @@ public class Ising {
   float[] w = new float[9]; // Array from -4 to 4 and probability exp^-2(E/kT)
 
   float Jkt;
-  float external_magnetic_field; 
-  int energy; 
+  float external_magnetic_field; //External magnetic field
+  int energy; //Energy
   
   int i, j, mcs, L;
-  int nsample, ndelta, nequil, mcsmax;
+  int nsample, ndelta, nequil, mcsmax; //Simulation steps; Ndelta steps; Nequil steps for thermalization; mcsmax Maximum number of MC Steps.
 
-  int ien, ici, m;
+  int ien, ici, m; //Initial magnetic moment
 
-  float mag, ave_mag, ave_mag2, ji;
-  float acc_mag, acc_mag2, acc_energy, acc_energy2;
-  float jktc, red_temp, invsize;
+  float mag, ave_mag, ave_mag2, ji; //Magnetization; average of magnetization and average of the square of the magnetization.
+  float acc_mag, acc_mag2, acc_energy, acc_energy2; //Accumulated values for the magnetization, the square of the magnetization, the total energy and the square of the energy
+  float jktc, red_temp, invsize; //Jkt = jktc/red_temp; Reduced temperature; Inverse of the surface
 
 
   int iseed = 21;
